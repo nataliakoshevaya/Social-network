@@ -14,9 +14,9 @@ ul {
 .app-wrapper {
   display: grid; 
   grid-template-areas: 
-   "nav posts profile";
-  grid-template-rows: 1fr;
-  grid-template-columns: 2fr 6fr 3fr;
+   "nav profile";
+  grid-template-rows: 600px;
+  grid-template-columns: 1fr 6fr;
   grid-gap: 20px;
   padding-top: 30px;
 }
@@ -25,4 +25,8 @@ ul {
 .container {
   margin: 0 auto;
   width: 1200px;
+}
+
+.content  {
+  grid-area: profile;
 }

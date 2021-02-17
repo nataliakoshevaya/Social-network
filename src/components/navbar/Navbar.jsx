@@ -11,23 +11,23 @@ const Navbar = () => {
       <div className={style.navTitle}>Menu</div>
         <div className={style.navItem}>
         <FontAwesomeIcon className={style.navIcon} icon={faUser} />
-            <a href="#">Profile </a>
+            <a href="/profile">Profile </a>
         </div>
         <div className={style.navItem}>
         <FontAwesomeIcon className={style.navIcon} icon={faEnvelope} />
-            <a href="#">Messages</a>
+            <a href="/dialog">Messages</a>
         </div>
         <div className={style.navItem}>
         <FontAwesomeIcon className={style.navIcon} icon={faStickyNote} />
-            <a href="#">News</a>
+            <a href="/news">News</a>
         </div>
         <div className={style.navItem}>
         <FontAwesomeIcon className={style.navIcon} icon={faMusic} />
-            <a href="#">Music</a>
+            <a href="/music">Music</a>
         </div>
         <div  className={style.navItem}>
         <FontAwesomeIcon className={style.navIcon} icon={faCog} />
-            <a href="#">Settings</a>
+            <a href="/settings">Settings</a>
         </div>
         </nav>
     

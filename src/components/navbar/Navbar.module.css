@@ -2,9 +2,9 @@
     grid-area: nav;
     padding-top: 10px;
     padding-left: 10px;
-    background-color: #fdfdfd;
-    border: 1px solid #ede9e9;
     padding: 25px;
+    border: 1px solid #ede9e9;
+    background-color: #fdfdfd;
 }
 
 .navItem {
@@ -24,6 +24,10 @@
 }
 
 .navItem a:hover {
+    color: darkblue;
+}
+
+.navItem a:active {
     color: darkblue;
 }
 
