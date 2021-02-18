@@ -2,4 +2,29 @@
     border: 1px solid #ede9e9;
     background-color: #fdfdfd;
     padding: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    font-size: 20px;
+}
+
+.active {
+    color: darkblue;
+}
+
+.dialogItem {
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: #fdfdfd;
+}
+
+.message {
+    background-color: #fff;
+    margin-top: 10px;
+    /* width: 200px;
+    height: 100px; */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ede9e9;
 }

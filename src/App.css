@@ -7,6 +7,21 @@ body {
   background-color: #f5f5f5;
 }
 
+a {
+  text-decoration: none;
+  color: #525151;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+a.active {
+  color: darkblue;
+}
+
 ul {
   list-style-type: none;
 }
@@ -15,7 +30,6 @@ ul {
   display: grid; 
   grid-template-areas: 
    "nav profile";
-  grid-template-rows: 600px;
   grid-template-columns: 1fr 6fr;
   grid-gap: 20px;
   padding-top: 30px;

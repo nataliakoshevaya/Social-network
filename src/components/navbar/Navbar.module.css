@@ -14,22 +14,22 @@
 .navItem:last-child {
     padding-top: 20px;
 }
-
+/* 
 .navItem a {
     text-decoration: none;
     color: #525151;
     font-size: 17px;
     font-weight: 500;
     padding-left: 5px;
-}
+} */
 
-.navItem a:hover {
+/* .navItem a:hover {
     color: darkblue;
 }
 
-.navItem a:active {
+.navItem a.active {
     color: darkblue;
-}
+} */
 
 .item{
     color: black;

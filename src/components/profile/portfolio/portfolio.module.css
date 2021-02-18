@@ -1,30 +1,29 @@
-.profile {
-    grid-area: portfolio;
+.portfolio {
     padding: 25px;
     border: 1px solid #ede9e9;
     background-color: #fdfdfd;
 }
 
-.profileImg {
+.portfolioImg {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-.profileImg img {
+.portfolioImg img {
     width: 150px;
     height: 28%;
     border: 1px solid #b1b0b0;
 }
 
-.profile li {
+.portfolio li {
     padding-bottom: 10px;
     color: #525151;
     font-weight: 500;
 }
 
 
-.profileTitle {
+.portfolioTitle {
     color: #424242;
     font-weight: 700;
     font-size: 25px;
@@ -32,7 +31,7 @@
     position: relative;
 }
 
-.profileTitle:before {
+.portfolioTitle:before {
     content: '';
     width: 40px;
     height: 2px;
