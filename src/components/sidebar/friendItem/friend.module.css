@@ -1,0 +1,14 @@
+.friendCard {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.friendImg img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* .friendName {
+    text-align: center;
+} */

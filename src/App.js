@@ -1,24 +1,26 @@
 import './App.css';
 import Headers from './components/header/Headers';
-import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/sidebar';
 import Profile from './components/profile/Profile';
 import Dialog from './components/dialog/dialog';
 import Music from './components/music/music';
 import News from './components/news/news';
 import Settings from './components/settings/settings';
-import {BrowserRouter, Route, Router} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
-const App = () => {
+
+const App = (props) => {
   return ( 
     <BrowserRouter>
       <div className="wrapper-content">
       <Headers />
       </div>
       <div className = "app-wrapper container" >
-          <Navbar />
+          <Sidebar friends={props.state.sidebar.friends}/>
          <div className="content">
-            <Route path='/profile' component={Profile}/>
-            <Route path='/dialog' component={Dialog}/>
+            <Route path='/profile' render={ () => <Profile posts={props.state.profilePage.posts}/>}/>
+            <Route path='/dialog' 
+                        render={ () => <Dialog data={props.state.dialogsPages} />}/>
             <Route path='/music' component={Music}/>
             <Route path='/news' component={News}/>
             <Route path='/settings' component={Settings}/>
