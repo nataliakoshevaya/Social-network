@@ -1,0 +1,20 @@
+.messageBlock {
+    display: flex;
+    margin-top: 10px;
+}
+
+.message {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ede9e9;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.messageBlockLeft {
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: flex-end; */
+    flex-direction: row-reverse;
+} 

@@ -1,8 +1,15 @@
-import style from '../dialog.module.css';
+import style from './message.module.css';
+
+
 
 const Message = (props) => {
     return (
-      <div className={style.message}>{props.message}</div>
+      <div className={ (props.user === "user") ? style.messageBlock : style.messageBlockLeft}>
+          <img className="avatar" src={props.img} alt="avatar"/>
+          <div className={style.message} >
+            {props.message}
+          </div>
+      </div>
     )
  }
 

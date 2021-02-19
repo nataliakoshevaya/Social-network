@@ -1,6 +1,7 @@
 .friendCard {
     text-align: center;
     margin-top: 20px;
+    
 }
 
 .friendImg img {
@@ -9,6 +10,7 @@
     border-radius: 50%;
 }
 
-/* .friendName {
-    text-align: center;
-} */
+.friendCard:hover {
+    transform: scale(1.2); 
+}
+

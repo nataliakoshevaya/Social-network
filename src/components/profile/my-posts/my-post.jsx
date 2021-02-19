@@ -1,34 +1,24 @@
 import style from './my-posts.module.css';
 import Post from './posts/Post';
-import React, {Component} from 'react'
+import React from 'react';
 
-class MyPosts extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      value: ''
-    };
+const MyPosts = (props) => {
+    let newPostElement = React.createRef();
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  };
+    let addPost = (e) => {
+      e.preventDefault();
 
-  handleChange(e) {
-    this.setState({value: e.target.value});
-  }
+      let text = newPostElement.current.value;
 
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log(this.state.value);
-    this.setState({
-      value: ''
-    })
-   
-  }
+      props.addPost(text);
+    }
 
-  render() {
-    let postsEl = this.props.posts.map(m => {
+    let onChange = (e) => {
+      let text = newPostElement.current.value;
+      props.postChange(text);
+    }
+
+    let postsEl = props.posts.map(m => {
       return (
         <Post message={m.message} like={m.likeCount} />
       )
@@ -38,16 +28,14 @@ class MyPosts extends Component {
       <div className={style.posts}>
         <div className={style.postWrapper}>
           <img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-girl-avatar-png-image_966352.jpg" alt="avatar" />
-          <form className={style.newPost} onSubmit={this.handleSubmit}>
-            <textarea className={style.postInput} value={this.state.value} placeholder="write something" onChange={this.handleChange}></textarea>
-            <button className={style.postBtn} value="submit">Post</button>
+          <form className={style.newPost} >
+            <textarea className={style.postInput} value={props.newPostText} onChange={onChange} placeholder="write something" ref={newPostElement}></textarea>
+            <button className={style.postBtn} onClick={addPost}>Post</button>
           </form>
         </div>
         {postsEl}
       </div>
     )
-  }
-
 }
 
 export default MyPosts;

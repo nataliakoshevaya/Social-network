@@ -7,7 +7,7 @@ import Portfolio from './portfolio/portfolio';
 const Profile = (props) => {
     return (
         <div className={style.wrapper}>
-            <MyPosts posts={props.posts}/>
+            <MyPosts posts={props.posts} addPost={props.addPost} newPostText={props.newPostText} postChange={props.postChange}/>
             <Portfolio />
         </div>
     )

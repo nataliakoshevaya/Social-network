@@ -14,7 +14,7 @@ const PortfolioInfo = (props) => {
 const Portfolio = () => {
     return (
         <div className={style.portfolio}>
-            <div className={style.portfolioTitle}>Yor page </div>
+            <div className={style.portfolioTitle}>My page </div>
             <div className={style.portfolioImg}>
                 <img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-girl-avatar-png-image_966352.jpg" alt="avatar" />
             </div>
