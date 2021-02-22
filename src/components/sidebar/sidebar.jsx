@@ -4,9 +4,12 @@ import style from './sidebar.module.css';
 
 
 const Sidebar = (props) => {
-    debugger;
 
-    let friendEl = props.friends.map((f) => {
+    let state = props.store.getState();
+
+    console.log(state.sidebar.friends)
+
+    let friendEl = state.sidebar.friends.map((f) => {
         return <FriendItem id={f.id} name={f.name} img={f.img}/>
     });
     

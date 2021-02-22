@@ -1,19 +1,18 @@
 import style from './my-posts.module.css';
 import Post from './posts/Post';
 import React from 'react';
-import {UpdateNewPostTextActionCreater, addPostActionCreater} from '../../../redux/profile-reducer';
 
 const MyPosts = (props) => {
-    let addPost = (e) => {
+debugger;
+    let onAddPost = (e) => {
       e.preventDefault();
 
-      props.dispatch(addPostActionCreater());
+      props.addPost();
     }
 
     let onChange = (e) => {
       let text = e.target.value;
-      
-      props.dispatch(UpdateNewPostTextActionCreater(text));
+      props.updateNewPostText(text);
     }
 
     let postsEl = props.posts.map(m => {
@@ -34,7 +33,7 @@ const MyPosts = (props) => {
                   placeholder="write something"
                   >
             </textarea>
-            <button className={style.postBtn} onClick={addPost}>Post</button>
+            <button className={style.postBtn} onClick={onAddPost}>Post</button>
           </form>
         </div>
         {postsEl}

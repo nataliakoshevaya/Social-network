@@ -13,28 +13,22 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 const App = (props) => {
-  debugger;
   return ( 
     <Router>
       <div className="wrapper-content">
       <Headers />
       </div>
       <div className = "app-wrapper container" >
-      <Sidebar friends={props.state.sidebar.friends}/>
+      <Sidebar store={props.store} />
          <div className="content">
           
            <Switch>
            
               <Route exact path='/' render={ () => 
-                            <Profile profilePage={props.state.profilePage}
-                                    dispatch={props.dispatch}
+                            <Profile store={props.store}
                             />}/>
               <Route path='/dialog' 
-                          render={ () =>
-                                  <Dialog 
-                                    data={props.state.dialogsPages} 
-                                    dispatch={props.dispatch}
-                                    />
+                     render={ () => <Dialog store={props.store}/>
                               }/>           
               <Route path='/music' component={Music}/>
               <Route path='/news' component={News}/>

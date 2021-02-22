@@ -5,6 +5,7 @@ import React from 'react';
 import { addMessageActionCreater, UpdateNewMessageextActionCreater } from '../../redux/dialogs-reducer';
 
 const Dialog = (props) => {
+    let state = props.store.getState();
     const addMessage = (e) => {
         e.preventDefault();
 
