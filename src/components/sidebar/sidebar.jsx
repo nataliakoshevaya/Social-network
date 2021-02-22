@@ -4,10 +4,7 @@ import style from './sidebar.module.css';
 
 
 const Sidebar = (props) => {
-    
-    // let onMouseOver = (e) => {
-    //     console.log(e.target.img)
-    // }
+    debugger;
 
     let friendEl = props.friends.map((f) => {
         return <FriendItem id={f.id} name={f.name} img={f.img}/>

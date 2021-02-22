@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className={style.navTitle}>Menu</div>
                 <div className={style.navItem}>
                     <FontAwesomeIcon className={style.navIcon} icon={faUser} />
-                    <NavLink to="/profile" activeClassName={style.active}>Profile </NavLink>
+                    <NavLink to="/" activeClassName={style.active}>Profile </NavLink>
                 </div>
                 <div className={style.navItem}>
                     <FontAwesomeIcon className={style.navIcon} icon={faEnvelope} />
