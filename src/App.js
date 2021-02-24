@@ -2,42 +2,37 @@ import './App.css';
 
 import Headers from './components/header/Headers';
 import Profile from './components/profile/Profile';
-import Dialog from './components/dialog/dialog';
 import Music from './components/music/music';
 import News from './components/news/news';
 import Settings from './components/settings/settings';
 import Sidebar from './components/sidebar/sidebar';
+import DialogContainer from './components/dialog/dialog-container';
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
+import UserContainer from './components/users/user-container';
 
 
 
 const App = (props) => {
-  return ( 
-    <Router>
+  return (
+      <>
       <div className="wrapper-content">
       <Headers />
       </div>
       <div className = "app-wrapper container" >
-      <Sidebar store={props.store} />
-         <div className="content">
-          
+      <Sidebar />
+         <div className = "content">
            <Switch>
-           
-              <Route exact path='/' render={ () => 
-                            <Profile store={props.store}
-                            />}/>
-              <Route path='/dialog' 
-                     render={ () => <Dialog store={props.store}/>
-                              }/>           
-              <Route path='/music' component={Music}/>
-              <Route path='/news' component={News}/>
-              <Route path='/settings' component={Settings}/>
-             
+              <Route exact path='/' render = { () => <Profile/>}/>
+              <Route path='/dialog' render = { () => <DialogContainer /> }/>          
+              <Route path='/music' component = {Music}/>
+              <Route path='/news' component = {News}/>
+              <Route path='/users' render = { () => <UserContainer /> }/> 
+              <Route path='/settings' component = {Settings}/>
            </Switch>
-           </div>
+          </div>
       </div> 
-    </Router>
+      </>
   );
 }
 

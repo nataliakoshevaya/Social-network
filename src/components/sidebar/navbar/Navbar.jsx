@@ -29,6 +29,10 @@ const Navbar = () => {
                 </div>
                 <div className={style.navItem}>
                     <FontAwesomeIcon className={style.navIcon} icon={faCog} />
+                    <NavLink to="/users" activeClassName={style.active}>Users</NavLink>
+                </div>
+                <div className={style.navItem}>
+                    <FontAwesomeIcon className={style.navIcon} icon={faCog} />
                     <NavLink to="/settings" activeClassName={style.active}>Settings</NavLink>
                 </div>
             </nav>

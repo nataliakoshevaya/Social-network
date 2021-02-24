@@ -3,12 +3,13 @@ import Post from './posts/Post';
 import React from 'react';
 
 const MyPosts = (props) => {
-debugger;
     let onAddPost = (e) => {
       e.preventDefault();
 
       props.addPost();
     }
+
+
 
     let onChange = (e) => {
       let text = e.target.value;
