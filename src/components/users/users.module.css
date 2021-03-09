@@ -10,3 +10,17 @@
     height: 100px;
     border-radius: 50%
 }
+
+.activePage {
+     font-weight: bold;
+}
+
+.pageNum {
+    margin-bottom: 10px;
+}
+
+.pageNum span {
+    cursor: pointer;
+    padding: 5px;
+}
+

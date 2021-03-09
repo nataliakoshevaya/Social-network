@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { addMessageActionCreater, UpdateNewMessageextActionCreater } from '../../redux/dialogs-reducer';
 import Dialog from './dialog';
 
+
+
 let mapStateToProp = (state) => {
     return {
         dialogsPages: state.dialogsPages 
