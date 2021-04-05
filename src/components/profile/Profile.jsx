@@ -5,10 +5,10 @@ import MyPostContainer from './my-posts/my-post-container';
 
 
 const Profile = (props) => {
-    return (
+    return(
         <div className={style.wrapper}>
             <MyPostContainer />
-            <Portfolio />
+            <Portfolio profile={props.profile} status={props.status} updateUserStatus={props.updateUserStatus}/>
         </div>
     )
 }

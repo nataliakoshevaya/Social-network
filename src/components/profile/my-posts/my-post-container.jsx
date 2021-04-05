@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {UpdateNewPostTextActionCreater, addPostActionCreater} from '../../../redux/profile-reducer';
+import {updateNewPostText, addPost} from '../../../redux/profile-reducer';
 import MyPosts from './my-post';
 //     return (<StoreContex.Consumer>
 //       { store =>{
@@ -32,19 +32,19 @@ let mapStateToProp = (state) => {
     };
 };
 
-let mapDispatchToProp = (dispatch) => {
-    return {
-      updateNewPostText: (text) => {
-        let action = UpdateNewPostTextActionCreater(text)
-        dispatch(action);
-      },
+// let mapDispatchToProp = (dispatch) => {
+//     return {
+//       updateNewPostText: (text) => {
+//         let action = UpdateNewPostTextActionCreater(text)
+//         dispatch(action);
+//       },
 
-      addPost: () => {
-        dispatch(addPostActionCreater());
-      }
-   }
-}
+//       addPost: () => {
+//         dispatch(addPostActionCreater());
+//       }
+//    }
+// }
 
-const MyPostContainer = connect(mapStateToProp, mapDispatchToProp)(MyPosts);
+const MyPostContainer = connect(mapStateToProp, {updateNewPostText, addPost})(MyPosts);
 
 export default MyPostContainer ;

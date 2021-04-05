@@ -23,6 +23,7 @@ const Dialog = (props) => {
         return <Message user={m.name} img={m.img} message={m.message} key={m.id}/>
     });
 
+   
     return (
         <div className={style.dialog}>
             <div className={style.dialogs}>
