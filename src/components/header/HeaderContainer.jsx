@@ -2,7 +2,7 @@ import { Component } from 'react';
 import './Header.css'
 import Headers from './Headers';
 import { connect } from 'react-redux';
-import {setAuthUserData, getAuthUserData} from '../../redux/auth-reducer'
+import {setAuthUserData, getAuthUserData, logout} from '../../redux/auth-reducer'
 
 class HeaderApiContainer extends Component {
    componentDidMount() {
@@ -27,6 +27,6 @@ let mapStateToProp = (state) => ({
 })
 
 
-let HeaderContainer = connect(mapStateToProp, {setAuthUserData, getAuthUserData})(HeaderApiContainer)
+let HeaderContainer = connect(mapStateToProp, {setAuthUserData, getAuthUserData, logout})(HeaderApiContainer)
 
 export default HeaderContainer;

@@ -3,6 +3,7 @@ import './Header.css'
 import style from './header.module.css'
 
 const Headers = (props) => {
+    debugger
     return (
         <header className="header">
             <div className="container">
@@ -11,11 +12,11 @@ const Headers = (props) => {
                         <img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="logo" />
                     </NavLink>
 
-
                     <div className={style.loginBlock}>
-                        {props.isAuth ? props.login :
+                        {props.isAuth ? 
+                        <div>{props.login} <button onClick={props.logout}>Log Out</button></div> :
                             <NavLink to='/login'>
-                                Login
+                                Log In
                             </NavLink>
                         }
                     </div>
